@@ -1,0 +1,10 @@
+spring.application.name: ecom-discovery-server
+
+server.port: 8761
+
+logging.level:
+  com.netflix.eureka.registry: ERROR
+
+eureka.client:
+  register-with-eureka: false  
+  fetch-registry: false

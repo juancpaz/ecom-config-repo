@@ -1,0 +1,10 @@
+spring.application.name: ecom-product
+server.port: 8081
+
+axon:
+  amqp:
+    exchange: ecom-axon3-exchange
+    queue: ecom-core-queue
+    eventhandling.processors.ECOM_CORE_EVENT_PROCESSOR.source: ecomCoreEventQueue  
+
+ecom.product.img.location: c://devel/home/juancpe/devel/juancpaz/ecom/ecom-fs/productImg
