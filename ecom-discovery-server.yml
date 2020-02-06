@@ -8,3 +8,19 @@ logging.level:
 eureka.client:
   register-with-eureka: false  
   fetch-registry: false
+
+---
+
+spring:
+  profiles: docker
+  application.name: ecom-discovery-server
+  cloud.config.uri: "http://ecom-configuration-server:8888"
+
+server.port: 8761
+
+logging.level:
+  com.netflix.eureka.registry: ERROR
+
+eureka.client:
+  register-with-eureka: false  
+  fetch-registry: false

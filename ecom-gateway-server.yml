@@ -1,0 +1,13 @@
+spring.application.name: ecom-gateway-server
+server.port: 9000
+zuul.ribbon.eager-load.enabled: true
+
+---
+
+spring:
+  profiles: docker
+  application.name: ecom-gateway-server
+  cloud.config.uri: "http://ecom-configuration-server:8888"
+eureka.client.serviceUrl.defaultZone: "http://ecom-discovery-server:8761"  
+server.port: 9000
+zuul.ribbon.eager-load.enabled: true
