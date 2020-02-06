@@ -5,7 +5,7 @@ zuul.ribbon.eager-load.enabled: true
 ---
 
 spring:
-  profiles: docker
+  profiles: container
   application.name: ecom-gateway-server
   cloud.config.uri: "http://ecom-configuration-server:8888"
 eureka.client.serviceUrl.defaultZone: "http://ecom-discovery-server:8761"  

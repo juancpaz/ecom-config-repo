@@ -12,7 +12,7 @@ eureka.client:
 ---
 
 spring:
-  profiles: docker
+  profiles: container
   application.name: ecom-discovery-server
   cloud.config.uri: "http://ecom-configuration-server:8888"
 
