@@ -15,7 +15,7 @@ spring:
   profiles: container
   application.name: ecom-product-service
   cloud.config.uri: "http://ecom-configuration-server:8888"
-  
+  rabbitmq.host: ecom-rabbit1  
 server.port: 8081  
 
 axon:
