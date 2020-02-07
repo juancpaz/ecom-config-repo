@@ -19,7 +19,16 @@ spring:
   cloud.config.uri: "http://ecom-configuration-server:8888"
   rabbitmq.host: ecom-rabbit1
   data.mongodb.host: ecom-mongodb
-  eureka.client.serviceUrl.defaultZone: "http://ecom-discovery-server:8761/eureka" 
+  
+eureka:
+  instance:
+    hostname: ecom-discovery-server
+    port: 8761
+  client:
+    register-with-eureka: true
+    fetch-registry: false
+    service-url:
+      default-zone: http://${eureka.instance.hostname}:${eureka.instance.port}/eureka/  
 
 axon:
   amqp:
