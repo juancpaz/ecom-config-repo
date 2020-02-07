@@ -11,12 +11,15 @@ ecom.product.img.location: c://devel/home/juancpe/devel/juancpaz/ecom/ecom-fs/pr
 
 ---
 
+server.port: 8081
+
 spring:
   profiles: container
   application.name: ecom-product-service
   cloud.config.uri: "http://ecom-configuration-server:8888"
-  rabbitmq.host: ecom-rabbit1  
-server.port: 8081  
+  rabbitmq.host: ecom-rabbit1
+  data.mongodb.host: ecom-mongodb
+  eureka.client.serviceUrl.defaultZone: "http://ecom-discovery-server:8761/eureka" 
 
 axon:
   amqp:
