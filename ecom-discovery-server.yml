@@ -2,25 +2,32 @@ spring.application.name: ecom-discovery-server
 
 server.port: 8761
 
-logging.level:
-  com.netflix.eureka.registry: ERROR
-
 eureka.client:
   register-with-eureka: false  
   fetch-registry: false
+
+logging.level:
+  com.netflix.eureka.registry: ERROR
 
 ---
 
 spring:
-  profiles: container
   application.name: ecom-discovery-server
+  profiles: container
   cloud.config.uri: "http://ecom-configuration-server:8888"
 
 server.port: 8761
 
+eureka:
+  instance:
+    hostname: ecom-discovery-server
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+  server:
+      waitTimeInMsWhenSyncEmpty: 0
+  
 logging.level:
   com.netflix.eureka.registry: ERROR
-
-eureka.client:
-  register-with-eureka: false  
-  fetch-registry: false

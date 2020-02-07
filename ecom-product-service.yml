@@ -27,6 +27,8 @@ eureka:
   client:
     register-with-eureka: true
     fetch-registry: false
+    healthcheck:
+      enabled: true     
     service-url:
       default-zone: http://${eureka.instance.hostname}:${eureka.instance.port}/eureka/  
 
