@@ -31,6 +31,7 @@ eureka:
       enabled: true     
     service-url:
       default-zone: http://${eureka.instance.hostname}:${eureka.instance.port}/eureka/  
+zuul.ribbon.eager-load.enabled: true      
 
 axon:
   amqp:
