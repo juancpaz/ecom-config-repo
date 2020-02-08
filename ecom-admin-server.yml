@@ -11,15 +11,6 @@ eureka:
     serviceUrl.defaultZone: "http://localhost:8761/eureka"  
 zuul.ribbon.eager-load.enabled: true      
 
-management:
-  endpoints:
-    web:
-      exposure:
-        include: "*"  #<2>
-  endpoint:
-    health:
-      show-details: ALWAYS    
-
 ---
 
 server.port: 8181
