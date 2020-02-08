@@ -1,0 +1,14 @@
+spring.application.name: ecom-admin-server
+server.port: 8181
+
+---
+
+server.port: 8181
+
+spring:
+  profiles: container
+  application.name: ecom-admin-service
+  cloud.config.uri: "http://ecom-configuration-server:8888"
+  
+eureka.client.serviceUrl.defaultZone: "http://ecom-discovery-server:8761/eureka"  
+zuul.ribbon.eager-load.enabled: true      
