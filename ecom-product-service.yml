@@ -1,11 +1,22 @@
 spring.application.name: ecom-product-service
 server.port: 8081
 
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: ALWAYS
+      
 axon:
   amqp:
     exchange: ecom-axon3-exchange
     queue: ecom-core-queue
     eventhandling.processors.ECOM_CORE_EVENT_PROCESSOR.source: ecomCoreEventQueue  
+    
+    
 
 ecom.product.img.location: c://devel/home/juancpe/devel/juancpaz/ecom/ecom-fs/productImg
 

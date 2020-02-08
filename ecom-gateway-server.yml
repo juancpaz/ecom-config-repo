@@ -1,6 +1,14 @@
 spring.application.name: ecom-gateway-server
 server.port: 9000
 zuul.ribbon.eager-load.enabled: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: ALWAYS
 
 ---
 server.port: 9000
