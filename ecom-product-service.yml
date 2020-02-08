@@ -20,17 +20,7 @@ spring:
   rabbitmq.host: ecom-rabbit1
   data.mongodb.host: ecom-mongodb
   
-eureka:
-  instance:
-    hostname: ecom-discovery-server
-    port: 8761
-  client:
-    register-with-eureka: true
-    fetch-registry: false
-    healthcheck:
-      enabled: true     
-    service-url:
-      default-zone: http://${eureka.instance.hostname}:${eureka.instance.port}/eureka/  
+eureka.client.serviceUrl.defaultZone: "http://ecom-discovery-server:8761/eureka"  
 zuul.ribbon.eager-load.enabled: true      
 
 axon:
