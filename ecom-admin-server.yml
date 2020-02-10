@@ -19,11 +19,4 @@ spring:
   profiles: container
   application.name: ecom-admin-server
   cloud.config.uri: "http://ecom-configuration-server:8888"
-  
-eureka:   
-  instance:
-    leaseRenewalIntervalInSeconds: 10
-    health-check-url-path: /actuator/health
-    metadata-map:
-      startup: ${random.int}
-      
+    
