@@ -26,7 +26,4 @@ eureka:
     health-check-url-path: /actuator/health
     metadata-map:
       startup: ${random.int}
-  client:
-    registryFetchIntervalSeconds: 5  
-    serviceUrl.defaultZone: "http://ecom-discovery-server:8761/eureka"  
-zuul.ribbon.eager-load.enabled: true      
+      
