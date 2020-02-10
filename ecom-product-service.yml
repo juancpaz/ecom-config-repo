@@ -31,7 +31,14 @@ spring:
   rabbitmq.host: ecom-rabbit1
   data.mongodb.host: ecom-mongodb
   
-management.endpoints.web.exposure.include: "*"
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: ALWAYS
   
 eureka.client.serviceUrl.defaultZone: "http://ecom-discovery-server:8761/eureka"  
 zuul.ribbon.eager-load.enabled: true      
