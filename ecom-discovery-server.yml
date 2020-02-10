@@ -1,10 +1,13 @@
-spring.application.name: ecom-discovery-server
-
+spring:
+  application.name: ecom-discovery-server
+  boot.admin.url: http://localhost:8080
 server.port: 8761
 
 eureka.client:
   register-with-eureka: false  
   fetch-registry: false
+
+
 
 logging.level:
   com.netflix.eureka.registry: ERROR
@@ -15,6 +18,7 @@ spring:
   application.name: ecom-discovery-server
   profiles: container
   cloud.config.uri: "http://ecom-configuration-server:8888"
+  boot.admin.url: http://ecom-admin-server:8181
 
 server.port: 8761
 
@@ -28,6 +32,6 @@ eureka:
       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
   server:
       waitTimeInMsWhenSyncEmpty: 0
-  
+ 
 logging.level:
   com.netflix.eureka.registry: ERROR
