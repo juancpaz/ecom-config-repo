@@ -22,7 +22,6 @@ spring:
 
 server.port: 8761
 
-spring.boot.admin.client.url: http://ecom-admin-server:8181
 management.endpoints.web.exposure.include: "*"
 
 eureka:
