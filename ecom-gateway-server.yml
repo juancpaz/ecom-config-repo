@@ -18,4 +18,6 @@ spring:
   cloud.config.uri: "http://ecom-configuration-server:8888"
 eureka.client.serviceUrl.defaultZone: "http://ecom-discovery-server:8761/eureka"  
 
+management.endpoints.web.exposure.include: "*"
+
 zuul.ribbon.eager-load.enabled: true
